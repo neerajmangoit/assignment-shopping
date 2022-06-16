@@ -1,0 +1,17 @@
+<div class="col-8 mx-3 my-3 d-inline" *ngFor="let pruducts of getCategories()">
+    <button type="button" class="btn btn-success" (click)="showProducts(pruducts)">{{ pruducts }}</button>
+</div>
+
+<div class="card-flex">
+<div *ngFor="let item of productData">
+        <div class="mx-4 my-4 card" style="width: 16rem;">
+            <img src="assets/images/product.jpg" style="width: 254px; height: 190px;" class="card-img-top"/>
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">Price: {{ item.price }}</p>
+                <p class="card-text">Color: {{ item.color }}</p>
+                <a href="#" class="btn btn-warning mr-2"><i class="fas fa-link"></i> View Product</a>
+            </div>
+        </div>
+</div>
+</div>
